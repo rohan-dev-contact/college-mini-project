@@ -1,7 +1,21 @@
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;width: 80%;height: 90%;display: flex;}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-image: url(home_bg_image.webp); */
+  background-repeat: no-repeat; 
+  background-size: cover;
+  /* opacity: .2; */
+}
 
-input[type=text], input[type=password],input[type=email] {
+form {
+  width: 80%;
+  height: 90%;
+  display: block;
+  margin: auto;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -32,11 +46,11 @@ button:hover {
 
 .imgcontainer {
   text-align: center;
-  margin: 24px 0 12px 0;
+
 }
 
 img.avatar {
-  width: 40%;
+  width: 10%;
   border-radius: 50%;
 }
 
@@ -52,18 +66,21 @@ span.psw {
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
-     display: block;
-     float: none;
+    display: block;
+    float: none;
   }
+
   .cancelbtn {
-     width: 100%;
+    width: 100%;
   }
 }
 
-.loginForm{
+.loginForm {
   padding-top: 15%;
+  width: 45%;
 }
 
-a,a:visited {
+a,
+a:visited {
   color: black;
 }

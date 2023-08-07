@@ -1,37 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>PharmaCo</title>
-    <style>
-    </style>
-</head>
+<?php
+require('header.php');
+print($header);
+?>
 
 <body>
-    <form class='loginForm' id="loginForm" action="loginHandler.php" method="post">
-        <div class="imgcontainer">
-            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">PharmaCo</a>
+            <div class="navbar" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="search.php">Search Medicine</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="login.php">login</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-
-            <button type="submit">Login</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-            <p>New Here <a href="http://localhost/signup.php">SignUp</a></p>
-            
-        </div>
-    </form>
-    <script src="./script.js"></script>
+    </nav>
 </body>
-
-</html>
+<footer></footer>
