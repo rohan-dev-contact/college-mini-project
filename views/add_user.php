@@ -17,7 +17,7 @@ print($header);
 
 <body>
     <?php
-    print($commonNav);
+    print($adminNav);
     ?><div class="container mt-5">
         <div class="span2 gap-2 mb-3">
                     <a href="manage_user.php" class="btn btn-secondary">Back to Manage User</a>

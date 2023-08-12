@@ -5,7 +5,14 @@ require('dbConnect.php');
 // Start a session
 session_start();
 if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
-    header("Location: home.php"); // Redirect to the home page
+   
+    if ($_SESSION["user_role"] == 'admin') {
+        // $_SESSION["user_role"] = 'admin';
+        header("Location: admin.php"); // Redirect admin to admin portal
+    } else {
+        header("Location: home.php"); // Redirect regular users to home page
+    }
+    // header("Location: home.php"); // Redirect to the home page
     exit();
 }
 // Check if the form has been submitted

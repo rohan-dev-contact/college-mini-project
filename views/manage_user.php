@@ -17,15 +17,15 @@ print($header);
 
 <body>
     <?php
-    print($commonNav);
+    print($adminNav);
     ?>
     <div class="container mt-5">
         <h1 class="text-center">Manage Users</h1>
-        <div class="span2 gap-2 mb-3">
+        <div class="span2 gap-2 mb-3 d-inline">
                     <a href="admin.php" class="btn btn-secondary">Back to Admin Portal</a>
                 </div>
-                <div class="span2 gap-2 mb-3">
-                    <a href="add_user.php" class="btn btn-secondary">Create New User</a>
+                <div class="span2 gap-2 mb-3 d-inline">
+                    <a href="add_user.php" class="btn btn-primary">Create New User</a>
                 </div>
         <div class="row mt-4">
             <div class="col-md-12">
@@ -43,7 +43,7 @@ print($header);
                             <th>Email</th>
                             <th>Phone</th>
                             <th>Role</th>
-                            <th>Actions</th>
+                            <th colspan="2">Actions</th>
                         </tr>
                     </thead>
                     <tbody>

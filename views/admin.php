@@ -16,7 +16,7 @@ print($header);
 ?>
 <body>
     <?php
-    print($commonNav);
+    print($adminNav);
     ?>  
     <div class="container mt-5">
     <h1 class="text-center">Admin Panel</h1>
@@ -32,7 +32,7 @@ print($header);
             </a>
         </div>
         <div class="col-md-4 mb-4">
-            <a href="add_medicine.php" class="card-link text-decoration-none">
+            <a href="manage_stock.php" class="card-link text-decoration-none">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Add Medicine</h5>
