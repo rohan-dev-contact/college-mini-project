@@ -1,0 +1,45 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar-brand img {
+  height: 60px; /* Adjust the height as needed */
+  /* background-color: aliceblue; */
+  width: auto;
+}
+
+#featuredProduct img{
+  height: 300px;
+}
+
+
+
+.back-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+.back-to-top.show {
+  display: block;
+}
+
+
+
+.jumbotron {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../resources/hero-background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 150px 0;
+  height: 90vh;
+  color: #ffffff;
+}
