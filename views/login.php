@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     try {
-        $sql = "SELECT id, password FROM users WHERE email = ?";
+        $sql = "SELECT id, password,role FROM users WHERE email = ?";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$email]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -23,12 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // User exists and password matches, store user ID in session
             $_SESSION["user_id"] = $user["id"];
             $_SESSION["logged_in"] = true;
-
             // Set success message for display
             $successMessage = "Login successful. Redirecting...";
-
-            // Redirect to home.php after a brief delay
-            header("Location: ../views/home.php");
+            if ($user["role"] == 'admin') {
+                $_SESSION["user_role"] = 'admin';
+                header("Location: admin.php"); // Redirect admin to admin portal
+            } else {
+                header("Location: home.php"); // Redirect regular users to home page
+            }
         } else {
             // User not found or password doesn't match, show error message
             $errorMessage = "Invalid credentials. Please try again.";
