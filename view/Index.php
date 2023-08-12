@@ -14,6 +14,11 @@ print($header);
     <!-- Hero Section -->
     <div class="jumbotron text-center  align-items-center">
         <div class="container">
+            <div class="row">
+                <div class="col" id="logoContainer">
+                    <img src="../resources/logo.png" alt="Pharmacy Logo">
+                </div>
+            </div>
             <h1>Welcome to Your Own Pharmacy</h1>
             <p>Your health is our priority.</p>
         </div>
@@ -34,7 +39,7 @@ print($header);
                     <h2 class="feature-heading">Customer Support</h2>
                     <p class="feature-description">Our support team is available 24/7 to assist you.</p>
                 </div>
-                <div class="span3">
+                <div class="span3 mt-2 mb-5">
                     <a href="#" class="btn btn-primary">Explore Products</a>
                 </div>
             </div>

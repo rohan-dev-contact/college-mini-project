@@ -35,11 +35,26 @@
 
 
 .jumbotron {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../resources/hero-background.jpg');
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../resources/hero-background.jpg'); */
+  background-image: linear-gradient(rgba(245, 238, 238, 0.144), rgba(0, 0, 0, 0.384));
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 150px 0;
-  height: 90vh;
-  color: #ffffff;
+  /* padding: 150px 0; */
+  height: auto;
+  color: black;
+  max-width: none; /* Remove the default max-width constraint */
+  padding: 0;
+}
+.jumbotron .col{
+  padding: 0; /* Remove padding from the column */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jumbotron img{
+    display: block; /* Make sure the image takes up the full width */
+    width: 45%; /* Set the image width to fill its container */
+    /* opacity: 0.7; Desired opacity value */
+    max-width: 100%; 
 }

@@ -34,7 +34,7 @@ $cartNav = '<nav class="navbar navbar-expand-lg bg-body-tertiary">
 
 $indexPageNav = '<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="index.php"><img src="../resources/logo.png" alt="Pharmacy Logo">PharmacyLand</a>
+        <a class="navbar-brand" href="index.php"><img src="../resources/logo.png" alt="Pharmacy Logo">PharmyLand</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
