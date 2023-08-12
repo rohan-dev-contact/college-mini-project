@@ -1,30 +1,34 @@
 <?php
 $commonNav = '<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-      <a class="navbar-brand" href="index.php"><img src="../resources/logo.png" alt="Pharmacy Logo">PharmacyLand</a>
+      <a class="navbar-brand" href="../index.php"><img src="../resources/logo.png" alt="Pharmacy Logo">PharmyLand</a>
       <div class="navbar" id="navbarNavDropdown">
           <ul class="navbar-nav">
               <li class="nav-item">
-                  <!--<a class="nav-link active" aria-current="page" href="search.php">Search Medicine</a>-->
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="login.php">login</a>
+                  <a class="nav-link active" aria-current="page" href="../views/logout.php">Logout</a>
               </li>
           </ul>
       </div>
   </div>
   </nav>';
 
+
+  $loginNav = '<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.php"><img src="../resources/logo.png" alt="Pharmacy Logo">PharmyLand</a>
+    </div>
+    </nav>';
+  
 $cartNav = '<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-      <a class="navbar-brand" href="index.php"><img src="../resources/logo.png" alt="Pharmacy Logo">PharmacyLand</a>
+      <a class="navbar-brand" href="../index.php"><img src="../resources/logo.png" alt="Pharmacy Logo">PharmacyLand</a>
       <div class="navbar" id="navbarNavDropdown">
           <ul class="navbar-nav">
               <li class="nav-item">
                   <!--<a class="nav-link active" aria-current="page" href="search.php">Search Medicine</a>-->
               </li>
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="login.php">login</a>
+                  <a class="nav-link active" aria-current="page" href="../views/login.php">login</a>
               </li>
           </ul>
       </div>
@@ -33,13 +37,13 @@ $cartNav = '<nav class="navbar navbar-expand-lg bg-body-tertiary">
 
 
 $indexPageNav = '<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-        <a class="navbar-brand" href="index.php"><img src="../resources/logo.png" alt="Pharmacy Logo">PharmyLand</a>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.php"><img src="../resources/logo.png" alt="Pharmacy Logo">PharmyLand</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto ms-auto">
           <!-- <li class="nav-item">
             <a class="nav-link" href="#">Home</a>
           </li> -->
@@ -53,7 +57,7 @@ $indexPageNav = '<nav class="navbar navbar-expand-lg navbar-light">
             <a class="nav-link" href="#contactusdiv">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link flex-end" href="login.php">Login</a>
+            <a class="nav-link flex-end " href="../views/login.php">Login</a>
           </li>
         </ul>
       </div>
