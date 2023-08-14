@@ -1,6 +1,7 @@
 <?php
 // Include your database connection configuration
 require('dbConnect.php');
+$previousEmail ="";
 
 // Start a session
 session_start();
@@ -17,7 +18,8 @@ if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
 }
 // Check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST["email"];
+    $email =rtrim($_POST["email"]);
+    $email =ltrim($email);
     $password = $_POST["password"];
 
     try {
@@ -41,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             // User not found or password doesn't match, show error message
             $errorMessage = "Invalid credentials. Please try again.";
+            $previousEmail =  (isset($email)==1) ? $email : "";
         }
     } catch (PDOException $e) {
         $errorMessage = "Error: " . $e->getMessage();
@@ -80,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form id="loginForm" action="login.php" method="post">
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="text" class="form-control" id="email" name="email" required>
+                    <input type="text" class="form-control" id="email" name="email" value="<?php  echo $previousEmail; ?> "  required>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
