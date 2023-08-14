@@ -41,6 +41,16 @@ print($header);
                 </div>
             </a>
         </div>
+        <div class="col-md-4 mb-4">
+            <a href="list_contact_us_messages.php" class="card-link text-decoration-none">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Contact Us Messages</h5>
+                        <p class="card-text">See messages sent by user</p>
+                    </div>
+                </div>
+            </a>
+        </div>
         <!-- Add more cards for other functionalities -->
     </div>
 </div>

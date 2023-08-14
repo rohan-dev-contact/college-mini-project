@@ -8,7 +8,8 @@ print($header);
 
 <body>
     <header>
-        <?php print($indexPageNav); ?>
+        <?php print($indexPageNav);
+        ?>
     </header>
 
     <!-- Hero Section -->
@@ -162,19 +163,25 @@ print($header);
     </div>
     <!-- Contact Section -->
     <div id="contactusdiv" class="container text-center mt-5">
+        <?php
+        
+        if (isset($_GET['success']) && $_GET['success'] == 1) {
+            echo '<div class="alert alert-success mt-3" id = "success-alert">Message sent successfully.</div>';
+        }
+        ?>
         <h2>Contact Us</h2>
         <p>We'd love to hear from you. Feel free to get in touch!</p>
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <form>
+                <form action="./views/save_contact_us_form.php" method="post" name="contact-us-form">
                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Your Name">
+                        <input type="text" class="form-control" placeholder="Your Name" name="username">
                     </div>
                     <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Your Email">
+                        <input type="email" class="form-control" placeholder="Your Email" name="email">
                     </div>
                     <div class="mb-3">
-                        <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                        <textarea class="form-control" rows="4" placeholder="Your Message" name="message"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
@@ -201,5 +208,12 @@ print($header);
                 behavior: "smooth"
             });
         }
+        var successAlert = document.getElementById('success-alert');
+        if (successAlert) {
+        successAlert.style.display = 'block';
+        setTimeout(function() {
+            successAlert.style.display = 'none';
+        }, 2000); // Display for 2 seconds
+}
     </script>
 </body>
