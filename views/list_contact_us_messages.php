@@ -40,8 +40,8 @@ print($header);
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Email</th>
-                            <th>Message</th>
+                            <th colspan=2>Email</th>
+                            <th colspan=4>Message</th>
                             <!-- <th>Status</th> -->
                             <!-- <th colspan="2">Actions</th> -->
                         </tr>
@@ -64,19 +64,19 @@ print($header);
     
                         foreach ($users as $user) {
                             echo '<tr>';
-                            // echo '<form method="post" action="#">';
-                            echo '<input type="hidden" name="user_id" value="' . $user['id'] . '">'; // Include user ID for updating
-                            echo '<td><input type="text" class="form-control" name="name" value="' . $user['name'] . '"></td>';
-                            echo '<td><input type="text" class="form-control" name="email" value="' . $user['email'] . '"></td>';
-                            echo '<td><input type="text" class="form-control" name="phone" value="' . $user['message'] . '"></td>';
-                            // echo '<td><input type="text" class="form-control" name="role" value="' . $user['active'] . '"></td>';
-                            // echo '<td><button type="submit" class="btn btn-success">Update</button></td>';
-                            // echo '</form>';
+                            // echo '<input type="hidden" name="user_id" value="' . $user['id'] . '">'; // Include user ID for updating
+                            // echo '<td><input type="text" class="form-control" name="name" value="' . $user['name'] . '"></td>';
+                            // echo '<td colspan=2><input type="text" class="form-control" name="email" value="' . $user['email'] . '"></td>';
+                            // echo '<td colspan=2><input type="text" class="form-control" name="email" value="' . $user['email'] . '"></td>';
+                            // echo '<td colspan=2><input type="text" class="form-control" name="email" value="' . $user['email'] . '"></td>';
+                            echo '<td><p class="text-start">' . $user['email'] . '</p></td>';
+                            echo '<td><p class="text-start">' .$user['email'] . '</p></td>';
+                            echo '<td><p class=" text-start text-wrap" style="width: 2rem;">' . $user['message'] . '</p></td>';
                             // echo '<form method="post" action="#">';
                             // echo '<input type="hidden" name="user_id" value="' . $user['id'] . '">'; // Include user ID for removal
                             // echo '<td><button type="submit" class="btn btn-danger">Remove</button></td>';
                             // echo '</form>';
-                            // echo '</tr>';
+                            echo '</tr>';
                         }
                         ?>
                     </tbody>
