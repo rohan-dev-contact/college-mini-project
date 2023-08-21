@@ -9,7 +9,7 @@ print($header);
   <?php
 print($loginNav);
 ?>
-  <div class="container">
+  <div class="container-fliud m-2">
     <div class="email-container">
       <h2 class="text-center">Forgot Password</h2>
       <form id="emailForm" action="../service/send_otp.php" method="post">

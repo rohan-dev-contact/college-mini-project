@@ -13,11 +13,16 @@ print($header);
         echo '<div class="alert alert-success mt-3" id = "success-alert">Cart updated successfully.</div>';
     }
     ?>  
-<div class="container">
-    <div class="span2 gap-2   d-inline">
+<div class="container-fluid m-2">
+    <!-- <div class="span2 gap-2   d-inline">
         <a href="home.php" class="btn btn-secondary mt-3">Continue Order</a>
     </div>
-    <h2>Your Cart</h2>
+    <h2>Your Cart</h2> -->
+
+    <div class="gap-2 mb-3 d-inline">
+            <a href="home.php"class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i></a>
+            <p class="text-center fs-2 fw-bold">Medicine bag</p>
+        </div> 
     <?php
     require('dbConnect.php');
         $user_id = $_SESSION['user_id']; // User ID from session or login info
@@ -52,13 +57,13 @@ print($header);
             echo '<form action="update_cart.php" method="post" class="d-flex">';
             echo '<input type="hidden" name="medicine_id" value="' . $item['medicine_id'] . '">';
             echo '<input type="number" name="new_quantity" value="' . $item['quantity'] . '" min="1" class="form-control me-2">';
-            echo '<button type="submit" class="btn btn-primary">Update</button>';
+            echo '<button type="submit" class="btn btn-primary"><i class="bi bi-cloud-arrow-up"></i></button>';
             echo '</form>';
             echo '</td>';
             echo '<td>';
             echo '<form action="delete_cart.php" method="post" class="d-flex">';
             echo '<input type="hidden" name="medicine_id" value="' . $item['medicine_id'] . '">';
-            echo '<button type="submit" class="btn btn-danger">Delete</button>';
+            echo '<button type="submit" class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button>';
             echo '</form>';
             echo '</td>';
             echo '</tr>';
@@ -101,6 +106,7 @@ print($header);
         $order_data['total_price'] = $order_data['total_price'] + $order_data['delivery_charges'];
         echo '<h4>Grand Total: $' . $order_data['total_price'] . '</h4>';
         echo '</div>';
+        echo '<button>checkout</button>';
     } else {
         echo '<p>Your cart is empty.</p>';
     }

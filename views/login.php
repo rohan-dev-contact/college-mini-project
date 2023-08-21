@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     print($loginNav);
     ?>
 
-    <div class="container">
+    <div class="container-fluid m-2">
         <div class="login-container">
             <h2 class="text-center">Login</h2>
 
@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
                 <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary ">Login <i class="bi bi-arrow-right"></i></button>
                 </div>
             </form>
 

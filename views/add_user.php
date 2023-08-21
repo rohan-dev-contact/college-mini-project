@@ -18,12 +18,11 @@ print($header);
 <body>
     <?php
     print($adminNav);
-    ?><div class="container mt-5">
-        <div class="span2 gap-2 mb-3">
-                    <a href="manage_user.php" class="btn btn-secondary">Back to Manage User</a>
-                </div>
-    <h1 class="text-center">Add New User</h1>
-
+    ?><div class="container-fluid m-2">
+   <div class="gap-2 mb-3 d-inline">
+            <a href="manage_user.php"class="btn btn-secondary"><i class="bi bi-arrow-left"></i></a>
+            <p class="text-center fs-2 fw-bold">Add New User"</p>
+        </div> 
     <div class="row mt-4">
         <div class="col-md-6 offset-md-3">
             <form method="post" action="process_add_user.php">

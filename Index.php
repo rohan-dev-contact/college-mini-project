@@ -23,7 +23,7 @@ print($header);
             <h1>Welcome to Your Own Pharmacy</h1>
             <p>Your health is our priority.</p>
         </div>
-        <div class="container">
+        <div class="container-fluid m-2">
             <div class="row my-5">
                 <div class="col-md-4">
                     <i class="bi bi-heart feature-icon"></i>
@@ -179,6 +179,9 @@ print($header);
                     </div>
                     <div class="mb-3">
                         <input type="email" class="form-control" placeholder="Your Email" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" placeholder="Your Phone Number" name="phone">
                     </div>
                     <div class="mb-3">
                         <textarea class="form-control" rows="4" placeholder="Your Message" name="message"></textarea>

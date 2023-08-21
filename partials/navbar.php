@@ -8,11 +8,11 @@ $commonNav = '<nav class="navbar navbar-expand-lg navbar-light">
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto ms-auto">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../views/cart.php">Cart</a>
+                  <a class="nav-link active" aria-current="page" href="../views/cart.php"><i class="bi bi-bag-heart"></i></a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../views/logout.php">Logout</a>
-              </li>
+                  <a class="nav-link active" aria-current="page" href="../views/logout.php"><i class="bi bi-box-arrow-right"></i></a>
+              </li>   
           </ul>
       </div>
   </div>
@@ -27,7 +27,7 @@ $commonNav = '<nav class="navbar navbar-expand-lg navbar-light">
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto ms-auto">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../views/logout.php">Logout</a>
+                  <a class="nav-link active" aria-current="page" href="../views/logout.php"><i class="bi bi-box-arrow-right"></i></a>
               </li>
           </ul>
       </div>
@@ -61,7 +61,7 @@ $indexPageNav = '<nav class="navbar navbar-expand-lg navbar-light">
             <a class="nav-link" href="#contactusdiv">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link flex-end " href="../views/login.php">Login</a>
+            <a class="nav-link flex-end " href="../views/login.php"><i class="bi bi-box-arrow-in-left"></i></a>
           </li>
         </ul>
       </div>

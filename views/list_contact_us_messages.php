@@ -16,76 +16,58 @@ print($header);
 ?>
 
 <body>
-    <?php
-    print($adminNav);
-    ?>
-    <div class="container mt-5">
-        <h1 class="text-center">Contact Us Messages</h1>
-        <div class="span2 gap-2 mb-3 d-inline">
-                    <a href="admin.php" class="btn btn-secondary">Back to Admin Portal</a>
-                </div>
-                <!-- <div class="span2 gap-2 mb-3 d-inline">
-                    <a href="add_user.php" class="btn btn-primary">Create New User</a>
-                </div> -->
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <!-- <form class="mb-3" method="get">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="search" placeholder="Search user...">
-                        <button class="btn btn-primary" type="submit">Search</button>
-                    </div>
-                </form>
-     -->
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Message</th>
-                            <!-- <th>Status</th> -->
-                            <!-- <th colspan="2">Actions</th> -->
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        // Include your database connection configuration
-                        require('dbConnect.php');
-    
-                        // Fetch users from the database
-                        $searchTerm = isset($_GET['search']) ? $_GET['search'] : '';
-                        // echo $searchTerm;
 
-                        // Fetch users from the database based on search query
-                        $sql = "SELECT id, name, email, message, active FROM contact_us
-                                WHERE active =1";
-                        $stmt = $pdo->prepare($sql);
-                        $stmt->execute();
-                        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-                        foreach ($users as $user) {
-                            echo '<tr>';
-                            // echo '<form method="post" action="#">';
-                            echo '<input type="hidden" name="user_id" value="' . $user['id'] . '">'; // Include user ID for updating
-                            echo '<td><input type="text" class="form-control" name="name" value="' . $user['name'] . '"></td>';
-                            echo '<td><input type="text" class="form-control" name="email" value="' . $user['email'] . '"></td>';
-                            echo '<td><input type="text" class="form-control" name="phone" value="' . $user['message'] . '"></td>';
-                            // echo '<td><input type="text" class="form-control" name="role" value="' . $user['active'] . '"></td>';
-                            // echo '<td><button type="submit" class="btn btn-success">Update</button></td>';
-                            // echo '</form>';
-                            // echo '<form method="post" action="#">';
-                            // echo '<input type="hidden" name="user_id" value="' . $user['id'] . '">'; // Include user ID for removal
-                            // echo '<td><button type="submit" class="btn btn-danger">Remove</button></td>';
-                            // echo '</form>';
-                            // echo '</tr>';
-                        }
-                        ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+  <?php
+    print($adminNav);?>
+  <div class="container-fluid m-2">
+    <div class="gap-2 mb-3 d-inline">
+      <a href="admin.php" class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i></a>
+      <!-- <a href="add_user.php" class="btn btn-primary ">Create User</a> -->
+      <p class="text-center fs-2 fw-bold">Manage Users</p>
     </div>
-    
-    <?php print ($commonFooter)?>
+    <table class="table">
+      <thead>
+        <tr>
+          <!-- <th scope="col">#</th> -->
+          <th scope="col">Name</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Email</th>
+          <th scope="col">Message</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+      // Include your database connection configuration
+      require('dbConnect.php');
+
+      // Fetch users from the database
+      $searchTerm = isset($_GET['search']) ? $_GET['search'] : '';
+      // echo $searchTerm;
+
+      // Fetch users from the database based on search query
+      $sql = "SELECT id, name, email, message,phone FROM contact_us
+              WHERE active =1";
+      $stmt = $pdo->prepare($sql);
+      $stmt->execute();
+      $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      foreach ($users as $user) {
+        echo ' <tr> ';
+        // echo '<th scope="row">'.$user['id'].'</th> ' ;
+        echo '<td>'.$user['name'].'</td> ' ;
+        echo '<td>'.$user['phone'].'</td> ' ;
+        echo '<td>'.$user['email'].'</td> ' ;
+        echo '<td><span class="overflow-scroll">'.$user['message'].'<span></td> ' ;
+        echo '<td><button type="submit" class="btn btn-outline-danger"><i class="bi bi-trash3-fill"></i></button></td>' ;
+        // echo '</tr> ' ;
+      }
+      ?>
+
+      </tbody>
+    </table>
+  </div>
+
+  <?php print ($commonFooter)?>
 </body>
 
 </html>

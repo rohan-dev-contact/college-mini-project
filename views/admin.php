@@ -25,8 +25,8 @@ print($header);
             <a href="manage_user.php" class="card-link text-decoration-none">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Manage User</h5>
-                        <p class="card-text">View and update medicine stock.</p>
+                        <h5 class="card-title text-center">Manage User <i class="bi bi-people-fill"></i></h5>
+                        <!-- <p class="card-text">View and update medicine stock.</p> -->
                     </div>
                 </div>
             </a>
@@ -35,8 +35,8 @@ print($header);
             <a href="manage_stock.php" class="card-link text-decoration-none">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Add Medicine</h5>
-                        <p class="card-text">Add new medicines to the stock.</p>
+                        <h5 class="card-title text-center">Stock Management <i class="bi bi-capsule"></i></h5>
+                        <!-- <p class="card-text">Add new medicines to the stock.</p> -->
                     </div>
                 </div>
             </a>
@@ -45,8 +45,8 @@ print($header);
             <a href="list_contact_us_messages.php" class="card-link text-decoration-none">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Contact Us Messages</h5>
-                        <p class="card-text">See messages sent by user</p>
+                        <h5 class="card-title text-center ">Messages <i class="bi bi-chat-left-text"></i></h5>
+                        <!-- <p class="card-text">See messages sent by user</p> -->
                     </div>
                 </div>
             </a>

@@ -16,24 +16,22 @@ print($header);
     }
     ?>
     <main>
-        <div class="container">
+        <div class="container-fluid m-2">
+        <div class="gap-2 mb-3 d-inline">
+            <a href="home.php" class="btn  btn-outline-secondary"><i class="bi bi-arrow-left"></i></a>
             
-                <div class="span2 gap-2 mb-3 d-inline">
-                            <a href="home.php" class="btn btn-secondary">Back</a>
-                        </div>
-                      
+        </div>
             <section class="search-bar">
-                <h2>Search Medicine</h2>
                 <form action="search.php" method="get">
-                    <div class="input-group">
+                    <div class="input-group mt-3">
                         <input type="text" class="form-control" name="search_query"
                             placeholder="Search for medicine...">
-                        <button type="submit" class="btn btn-primary">Search</button>
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
                     </div>
                 </form>
             </section>
             <section class="search-results">
-                <h2>Search Results</h2>
+            <p class="text-center fs-4 fw-bold">Search Result</p>
                 <div class="row">
                     <?php
                     
