@@ -29,7 +29,7 @@ print($header);
         $sql_user_cart = "SELECT uc.quantity, s.medicine_name, s.price, uc.medicine_id
                           FROM user_carts uc
                           INNER JOIN stock s ON uc.medicine_id = s.id
-                          WHERE uc.user_id = ?";
+                          WHERE uc.user_id = ? and active =1";
         $stmt_user_cart = $pdo->prepare($sql_user_cart);
         $stmt_user_cart->execute([$user_id]);
         $cart_items = $stmt_user_cart->fetchAll(PDO::FETCH_ASSOC);
@@ -106,7 +106,9 @@ print($header);
         $order_data['total_price'] = $order_data['total_price'] + $order_data['delivery_charges'];
         echo '<h4>Grand Total: $' . $order_data['total_price'] . '</h4>';
         echo '</div>';
-        echo '<button>checkout</button>';
+        echo '<div class="d-grid gap-2">
+        <a href="address_selection.php" class="btn btn-outline-primary">Checkout</a>
+    </div>';
     } else {
         echo '<p>Your cart is empty.</p>';
     }

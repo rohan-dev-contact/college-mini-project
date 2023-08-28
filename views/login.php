@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     try {
-        $sql = "SELECT id, password,role FROM users WHERE email = ?";
+        $sql = "SELECT id, password,role,name FROM users WHERE email = ?";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$email]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($user && password_verify($password, $user["password"])) {
             // User exists and password matches, store user ID in session
             $_SESSION["user_id"] = $user["id"];
+            $_SESSION["name"] = $user["name"];
             $_SESSION["logged_in"] = true;
             // Set success message for display
             $successMessage = "Login successful. Redirecting...";

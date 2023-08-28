@@ -7,7 +7,7 @@ $medicine_id = $_POST['medicine_id'];
 $quantity = $_POST['quantity'];
 
 // Check if the item is already in the user's cart
-$sql_check_cart = "SELECT * FROM user_carts WHERE user_id = ? AND medicine_id = ?";
+$sql_check_cart = "SELECT * FROM user_carts WHERE user_id = ? AND medicine_id = ? and active=1";
 $stmt_check_cart = $pdo->prepare($sql_check_cart);
 $stmt_check_cart->execute([$user_id, $medicine_id]);
 $existing_item = $stmt_check_cart->fetch(PDO::FETCH_ASSOC);
@@ -20,9 +20,10 @@ if ($existing_item) {
     $stmt_update_cart->execute([$new_quantity, $user_id, $medicine_id]);
 } else {
     // If item doesn't exist, add it to the cart
-    $sql_add_to_cart = "INSERT INTO user_carts (user_id, medicine_id, quantity) VALUES (?, ?, ?)";
+    $active =1;
+    $sql_add_to_cart = "INSERT INTO user_carts (user_id, medicine_id, quantity, active) VALUES (?, ?, ?, ?)";
     $stmt_add_to_cart = $pdo->prepare($sql_add_to_cart);
-    $stmt_add_to_cart->execute([$user_id, $medicine_id, $quantity]);
+    $stmt_add_to_cart->execute([$user_id, $medicine_id, $quantity ,$active]);
 }
 
 // Redirect back to the previous page with a success message

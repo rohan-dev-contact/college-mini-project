@@ -1,12 +1,15 @@
 <?php
 $commonNav = '<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
-      <a class="navbar-brand" href="../index.php"><img src="../resources/logo.png" alt="Pharmacy Logo">PharmyLand</a>
+      <a class="navbar-brand" href="../views/home.php"><img src="../resources/logo.png" alt="Pharmacy Logo">PharmyLand</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto ms-auto">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../views/user.php"><i class="bi bi-person-circle"></i></a>
+              </li>
               <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="../views/cart.php"><i class="bi bi-bag-heart"></i></a>
               </li>
@@ -16,11 +19,15 @@ $commonNav = '<nav class="navbar navbar-expand-lg navbar-light">
           </ul>
       </div>
   </div>
-  </nav>';
+  </nav>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+</div>
+';
 
   $adminNav = '<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
-      <a class="navbar-brand" href="../index.php"><img src="../resources/logo.png" alt="Pharmacy Logo">PharmyLand</a>
+      <a class="navbar-brand" href="../views/admin.php"><img src="../resources/logo.png" alt="Pharmacy Logo">PharmyLand</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,12 +39,20 @@ $commonNav = '<nav class="navbar navbar-expand-lg navbar-light">
           </ul>
       </div>
   </div>
-  </nav>';
+  </nav>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+</div>
+';
   $loginNav = '<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="../index.php"><img src="../resources/logo.png" alt="Pharmacy Logo">PharmyLand</a>
     </div>
-    </nav>';
+    </nav>
+    <div class="loader-wrapper">
+    <div class="loader"></div>
+</div>
+';
 
 
 $indexPageNav = '<nav class="navbar navbar-expand-lg navbar-light">
@@ -67,5 +82,8 @@ $indexPageNav = '<nav class="navbar navbar-expand-lg navbar-light">
       </div>
     </div>
   </nav>
+  <div class="loader-wrapper">
+  <div class="loader"></div>
+</div>
 ';
 ?>
