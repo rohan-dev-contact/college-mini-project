@@ -20,8 +20,9 @@ print($header);
     ?>  
     <div class="container mt-5">
     <h1 class="text-center">Admin Panel</h1>
-    <div class="row mt-4">
-        <div class="col-md-4 mb-4">
+    <p class="text-center">Select Any Option</p>
+    <div class="row mt-3">
+        <div class="col-md-3 mb-4">
             <a href="manage_user.php" class="card-link text-decoration-none">
                 <div class="card">
                     <div class="card-body">
@@ -31,7 +32,7 @@ print($header);
                 </div>
             </a>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-3 mb-4">
             <a href="manage_stock.php" class="card-link text-decoration-none">
                 <div class="card">
                     <div class="card-body">
@@ -41,11 +42,31 @@ print($header);
                 </div>
             </a>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-3 mb-4">
             <a href="list_contact_us_messages.php" class="card-link text-decoration-none">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title text-center ">Messages <i class="bi bi-chat-left-text"></i></h5>
+                        <!-- <p class="card-text">See messages sent by user</p> -->
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 mb-4">
+            <a href="admin_orders.php" class="card-link text-decoration-none">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center ">Orders <i class="bi bi-card-list"></i></h5>
+                        <!-- <p class="card-text">See messages sent by user</p> -->
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 mb-4">
+            <a href="admin_orders_processed.php" class="card-link text-decoration-none">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center ">Processed Orders <i class="bi bi-card-list"></i></h5>
                         <!-- <p class="card-text">See messages sent by user</p> -->
                     </div>
                 </div>

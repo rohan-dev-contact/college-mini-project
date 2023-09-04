@@ -21,8 +21,8 @@ print($header);
             <div class="card-body">
                 <h5 class="card-title">Options</h5>
                 <ul class="list-group">
-                    <li class="list-group-item"><a style="text-decoration: none;" href="previous_orders.php">View Previous Orders</a></li>
-                    <li class="list-group-item"><a style="text-decoration: none;" href="current_orders.php">View Current Orders</a></li>
+                    <li class="list-group-item"><a style="text-decoration: none;" href="previous_orders.php">View Complete Orders</a></li>
+                    <li class="list-group-item"><a style="text-decoration: none;" href="current_orders.php">View Active Orders</a></li>
                     <li class="list-group-item"><a style="text-decoration: none;" href="address_book.php">Manage Address Book</a></li>
                 </ul>
             </div>
