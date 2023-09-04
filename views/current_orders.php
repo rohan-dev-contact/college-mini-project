@@ -23,7 +23,7 @@ print($header);
         require('dbConnect.php'); // Include your database connection
 
         $user_id = $_SESSION["user_id"]; // Replace with the actual user ID
-        $query = "SELECT * FROM orders WHERE user_id = :user_id AND status = 'pending'";
+        $query = "SELECT * FROM orders WHERE user_id = :user_id AND status <> 'delivered'";
         $stmt = $pdo->prepare($query);
         $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
         $stmt->execute();
