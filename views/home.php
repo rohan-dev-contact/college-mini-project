@@ -39,7 +39,7 @@ print($header);
                     while ($item = $stmt_featured_items->fetch(PDO::FETCH_ASSOC)) {
                         echo '<div class="col-md-3 mt-2">';
                             echo '<div class="card h-100">';
-                            echo '<img src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" class="card-img-top img-thumbnail img-fluid" alt="Medicine Image" style="width: auto; height: 200px; ">';
+                            echo '<img src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" class="card-img-top img-thumbnail img-fluid" alt="Medicine Image" style="width: auto; height: 200px; object-fit: contain;">';
                             echo '<div class="card-body">';
                             echo '<h5 class="card-title">' . $item['medicine_name'] . '</h5>';
                             echo '<p class="card-text">Price: $' . $item['price'] . '</p>';
