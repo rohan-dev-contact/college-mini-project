@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <div class="g-recaptcha mb-3" data-sitekey="6LcAMVAoAAAAALeqOp39UH3zSkz_Y3gNJsJeXBvT"></div> <!-- Replace with your Site Key -->
                 <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary">Login <i class="bi bi-arrow-right"></i></button>
+                    <button id ="login-button" type="submit" class="btn btn-primary">Login <i class="bi bi-arrow-right"></i></button>
                 </div>
             </form>
 

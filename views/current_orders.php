@@ -52,7 +52,7 @@ print($header);
                 $stmt_items->execute();
                 echo '<a href="view_invoice.php?order_id=';
                 echo $row['order_id'];
-                echo 'class="btn btn-primary"target="_blank">View Invoice</a>';
+                echo 'class="btn btn-primary" target="_blank">View Invoice</a>';
                 echo '<table class="table">';
                 echo '<thead><tr><th>Medicine Name</th><th>Quantity</th><th>Unit Price</th><th>Total Price</th></tr></thead>';
                 echo '<tbody>';

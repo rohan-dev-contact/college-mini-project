@@ -1,8 +1,13 @@
 <?php
-$host = 'db4free.net';
-$username  = 'pharmyland';
-$password = 'pharmyland';
+// $host = 'db4free.net';
+// $username  = 'pharmyland';
+// $password = 'pharmyland';
+// $database = 'pharmyland';
+$host = 'localhost';
+$username  = 'pharmaCo';
+$password = '';
 $database = 'pharmyland';
+
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
