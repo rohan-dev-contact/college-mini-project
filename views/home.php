@@ -32,7 +32,7 @@ print($header);
                     <?php
                     
                     // Fetch random items from the stock table as featured items
-                    $sql_featured_items = "SELECT * FROM stock ORDER BY RAND() LIMIT 6";
+                    $sql_featured_items = "SELECT * FROM stock ORDER BY RAND() LIMIT 8";
                     $stmt_featured_items = $pdo->query($sql_featured_items);
                     //<!-- echo '<img class= "card-img-top" src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" alt="Image" style="width: 100px;height: 100px;">'; -->
                     

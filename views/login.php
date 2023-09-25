@@ -1,4 +1,7 @@
 <?php
+try{
+
+
 // Include your database connection configuration
 require('dbConnect.php');
 $previousEmail = "";
@@ -60,6 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
+}catch(\Throwable $th){
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -72,11 +78,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <?php
-    require('../partials/header.php');
-    require('../partials/navbar.php');
-    require('../partials/footer.php');
-    print($header);
-    print($loginNav);
+    try {
+        require('../partials/header.php');
+        require('../partials/navbar.php');
+        require('../partials/footer.php');
+        print($header);
+        print($loginNav);
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
+   
     ?>
 
     <div class="container-fluid m-2">
@@ -85,12 +96,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <!-- Display success or error message here -->
             <?php
-            if (isset($errorMessage)) {
-                echo '<div class="alert alert-danger alert-dismissible text-center" role="alert">';
-                echo $errorMessage;
-                echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
-                echo '</div>';
+            try {
+                if (isset($errorMessage)) {
+                    echo '<div class="alert alert-danger alert-dismissible text-center" role="alert">';
+                    echo $errorMessage;
+                    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+                    echo '</div>';
+                }
+            } catch (\Throwable $th) {
+                //throw $th;
             }
+           
             ?>
 
             <form id="loginForm" action="login.php" method="post">
