@@ -15,7 +15,7 @@ print($header);
 
     <div class="container">
     <a href="user.php"class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i></a>
-        <h2><?php print_r($_SESSION["name"]);?></h2>
+        <!-- <h2><?//php print_r($_SESSION["name"]);?></h2> -->
 
         <h2>Current Orders</h2>
 

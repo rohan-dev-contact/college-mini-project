@@ -17,7 +17,7 @@ print($header);
         <div class="container">
             <div class="row">
                 <div class="col" id="logoContainer">
-                    <img src="../resources/logo.png" alt="Pharmacy Logo">
+                    <img src="../resources/logo.png" alt="Pharmacy Logo" style= "object-fit: contain;">
                 </div>
             </div>
             <h1>Welcome to Your Own Pharmacy</h1>
@@ -55,7 +55,7 @@ print($header);
         <div class="row">
             <div class="col-md-4">
                 <div class="card h-100 ">
-                    <img src="./resources/tablet1.jpg" class="card-img-top" alt="Product 1">
+                    <img src="./resources/tablet1.jpg" class="card-img-top" alt="Product 1" style = "object-fit: contain;">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Pain Relief Tablets</h5>
                         <p class="card-text">Effective pain relief tablets for various types of pain.</p>
@@ -68,7 +68,7 @@ print($header);
             </div>
             <div class="col-md-4">
                 <div class="card h-100 ">
-                    <img src="./resources/tablet2.png" class="card-img-top" alt="Product 2">
+                    <img src="./resources/tablet2.png" class="card-img-top" alt="Product 2"  style = "object-fit: contain;">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Vitamin C Supplements</h5>
                         <p class="card-text">Boost your immune system with our high-quality Vitamin C supplements.</p>
@@ -81,7 +81,7 @@ print($header);
             </div>
             <div class="col-md-4">
                 <div class="card h-100 ">
-                    <img src="./resources/tablet3.jpg" class="card-img-top" alt="Product 3">
+                    <img src="./resources/tablet3.jpg" class="card-img-top" alt="Product 3"   style = "object-fit: contain;" >
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Allergy Relief Spray</h5>
                         <p class="card-text">Fast-acting allergy relief nasal spray for seasonal allergies.</p>
