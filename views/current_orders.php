@@ -27,7 +27,6 @@ print($header);
         $stmt = $pdo->prepare($query);
         $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
         $stmt->execute();
-
         if ($stmt->rowCount() > 0) {
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 echo '<div class="accordion">';
@@ -51,7 +50,9 @@ print($header);
                 $stmt_items = $pdo->prepare($query_items);
                 $stmt_items->bindParam(':order_id', $order_id, PDO::PARAM_INT);
                 $stmt_items->execute();
-                
+                echo '<a href="view_invoice.php?order_id=';
+                echo $row['order_id'];
+                echo 'class="btn btn-primary"target="_blank">View Invoice</a>';
                 echo '<table class="table">';
                 echo '<thead><tr><th>Medicine Name</th><th>Quantity</th><th>Unit Price</th><th>Total Price</th></tr></thead>';
                 echo '<tbody>';

@@ -8,13 +8,13 @@ $commonNav = '<nav class="navbar navbar-expand-lg navbar-light">
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto ms-auto">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../views/user.php"><i class="bi bi-person-circle"></i></a>
+                  <a class="nav-link active" aria-current="page" href="../views/user.php">Profile <i class="bi bi-person-circle"></i></a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../views/cart.php"><i class="bi bi-bag-heart"></i></a>
+                  <a class="nav-link active" aria-current="page" href="../views/cart.php">Cart <i class="bi bi-bag-heart"></i></a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../views/logout.php"><i class="bi bi-box-arrow-right"></i></a>
+                  <a class="nav-link active" aria-current="page" href="../views/logout.php">Logout <i class="bi bi-box-arrow-right"></i></a>
               </li>   
           </ul>
       </div>
@@ -34,7 +34,7 @@ $commonNav = '<nav class="navbar navbar-expand-lg navbar-light">
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto ms-auto">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../views/logout.php"><i class="bi bi-box-arrow-right"></i></a>
+                  <a class="nav-link active" aria-current="page" href="../views/logout.php">Logout <i class="bi bi-box-arrow-right"></i></a>
               </li>
           </ul>
       </div>
@@ -76,7 +76,7 @@ $indexPageNav = '<nav class="navbar navbar-expand-lg navbar-light">
             <a class="nav-link" href="#contactusdiv">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link flex-end " href="../views/login.php"><i class="bi bi-box-arrow-in-left"></i></a>
+            <a class="nav-link flex-end " href="../views/login.php">Login <i class="bi bi-box-arrow-in-left"></i></a>
           </li>
         </ul>
       </div>
