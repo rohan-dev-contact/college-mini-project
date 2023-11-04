@@ -2,6 +2,7 @@
 require('../partials/header.php');
 require('../partials/navbar.php');
 require('../partials/footer.php');
+
 print($header); 
 ?>
 
@@ -12,7 +13,7 @@ print($loginNav);
   <div class="container-fliud m-2">
     <div class="email-container">
       <h2 class="text-center">Forgot Password</h2>
-      <form id="emailForm" action="../service/send_otp.php" method="post">
+      <form id="emailForm" action="send_otp.php" method="post">
         <div class="mb-3">
           <label for="email" class="form-label">Enter Email</label>
           <input type="email" class="form-control" id="email" name="email" required>
