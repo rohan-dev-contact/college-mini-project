@@ -1,10 +1,10 @@
 <?php
-$host = 'db4free.net';
-$username  = 'pharmyland';
-$password = 'pharmyland';
-// $host = 'localhost';
-// $username  = 'pharmaCo';
-// $password = '';
+// $host = 'db4free.net';
+// $username  = 'pharmyland';
+// $password = 'pharmyland';
+$host = 'localhost';
+$username  = 'root';
+$password = '';
 $database = 'pharmyland';
 
 
