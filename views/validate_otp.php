@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
     } else {
-        echo "Invalid OTP. Please try again.";
+        header("Location: otp_validation.php");
     }
 } else {
     header("Location: login.php");
