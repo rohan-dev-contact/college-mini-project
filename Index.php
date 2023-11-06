@@ -194,7 +194,7 @@ print($header);
     <button class="back-to-top" onclick="scrollToTop()">
         &#9650;
     </button>
-    <?php print ($commonFooter)?>
+    <?php print ($commonFooterForHome)?>
     <script>
         window.addEventListener("scroll", function () {
             var backToTopButton = document.querySelector(".back-to-top");

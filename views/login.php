@@ -4,6 +4,15 @@ use PHPMailer\PHPMailer\Exception;
 require('../phpMailer/src/Exception.php');
 require('../phpMailer/src/PHPMailer.php');
 require('../phpMailer/src/SMTP.php');
+try {
+    require('../partials/header.php');
+    require('../partials/navbar.php');
+    require('../partials/footer.php');
+    print($header);
+    print($loginNav);
+} catch (\Throwable $th) {
+    //throw $th;
+}
 try{
 
 
@@ -56,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["logged_in"] = true;
                 $_SESSION["otp_verified"] = false;
                 $_SESSION["user_email"] = $email; // Store the user's email for OTP validation
-                $_SESSION["role"] = $user["role"];
+                $_SESSION["user_role"] = $user["role"];
             
                 // Generate an OTP
                 $otp = generateOTP();
@@ -115,15 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <?php
-    try {
-        require('../partials/header.php');
-        require('../partials/navbar.php');
-        require('../partials/footer.php');
-        print($header);
-        print($loginNav);
-    } catch (\Throwable $th) {
-        //throw $th;
-    }
+   
    
     ?>
 
@@ -168,7 +169,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <?php
-    print($commonFooter);
+    print($commonFooterForHome);
     ?>
 </body>
 

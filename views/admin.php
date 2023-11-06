@@ -14,67 +14,65 @@ require('../partials/footer.php');
 
 print($header);
 ?>
+
 <body>
     <?php
-    print($adminNav);
-    ?>  
+    print($commonNav); // Use the common navigation bar
+    ?>
+
     <div class="container mt-5">
-    <h1 class="text-center">Admin Panel</h1>
-    <p class="text-center">Select Any Option</p>
-    <div class="row mt-3">
-        <div class="col-md-3 mb-4">
-            <a href="manage_user.php" class="card-link text-decoration-none">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Manage User <i class="bi bi-people-fill"></i></h5>
-                        <!-- <p class="card-text">View and update medicine stock.</p> -->
+        <h1 class="text-center">Admin Panel</h1>
+        <p class="text-center">Select Any Option</p>
+        <div class="row mt-3">
+            <div class="col-md-3 mb-4">
+                <a href="manage_user.php" class="card-link text-decoration-none">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Manage User <i class="bi bi-people-fill"></i></h5>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 mb-4">
-            <a href="manage_stock.php" class="card-link text-decoration-none">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Stock Management <i class="bi bi-capsule"></i></h5>
-                        <!-- <p class="card-text">Add new medicines to the stock.</p> -->
+                </a>
+            </div>
+            <div class="col-md-3 mb-4">
+                <a href="manage_stock.php" class="card-link text-decoration-none">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Stock Management <i class="bi bi-capsule"></i></h5>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 mb-4">
-            <a href="list_contact_us_messages.php" class="card-link text-decoration-none">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center ">Messages <i class="bi bi-chat-left-text"></i></h5>
-                        <!-- <p class="card-text">See messages sent by user</p> -->
+                </a>
+            </div>
+            <div class="col-md-3 mb-4">
+                <a href="list_contact_us_messages.php" class="card-link text-decoration-none">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Messages <i class="bi bi-chat-left-text"></i></h5>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 mb-4">
-            <a href="admin_orders.php" class="card-link text-decoration-none">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center ">Orders <i class="bi bi-card-list"></i></h5>
-                        <!-- <p class="card-text">See messages sent by user</p> -->
+                </a>
+            </div>
+            <div class="col-md-3 mb-4">
+                <a href="admin_orders.php" class="card-link text-decoration-none">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Orders <i class="bi bi-card-list"></i></h5>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 mb-4">
-            <a href="admin_orders_processed.php" class="card-link text-decoration-none">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center ">Processed Orders <i class="bi bi-card-list"></i></h5>
-                        <!-- <p class="card-text">See messages sent by user</p> -->
+                </a>
+            </div>
+            <div class="col-md-3 mb-4">
+                <a href="admin_orders_processed.php" class="card-link text-decoration-none">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Processed Orders <i class="bi bi-card-list"></i></h5>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
+            <!-- Add more cards for other functionalities -->
         </div>
-        <!-- Add more cards for other functionalities -->
     </div>
-</div>
+
     <?php print ($commonFooter)?>
-    </body>
-    </html>
+</body>
+</html>

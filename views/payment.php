@@ -10,9 +10,9 @@ print($header);
 <body>
     <?php
     print($commonNav);?>
-    <div class="container-fluid m-2">
+    <div class="container mt-3 my-class-to-b">
         <div class="gap-2 mb-3 d-inline">
-            <a href="cart.php" class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i></a>
+            <a href="address_selection.php" class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i>Back to Address Selection</a>
             <p class="text-center fs-2 fw-bold">Medicine bag</p>
         </div>
         <form action="save_order.php" method="post">

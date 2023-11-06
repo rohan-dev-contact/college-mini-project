@@ -27,6 +27,17 @@ if ($existing_item) {
 }
 
 // Redirect back to the previous page with a success message
-header('Location: ' . $_SERVER['HTTP_REFERER'] . '?success=1');
+$redirect_url = $_SERVER['HTTP_REFERER'];
+
+// Check if the URL already contains a query string
+if (strpos($redirect_url, '?') === false) {
+    // If not, add the success parameter
+    $redirect_url .= '?success=1';
+} else {
+    // If it already has a query string, append the success parameter using '&'
+    $redirect_url .= '';
+}
+
+header('Location: ' . $redirect_url);
 exit;
 ?>

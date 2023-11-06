@@ -1,25 +1,27 @@
 <?php
 require('../middleware/protected_page.php');
-
 require('../partials/header.php');
 require('../partials/navbar.php');
 require('../partials/footer.php');
-// session_start();
+
 print($header);
 ?>
 
+<style>
+    .order-list {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+</style>
+
 <body>
-    <?php
-    print($commonNav);
-    ?>
+    <?php print($commonNav); ?>
 
-    <div class="container">
-    <a href="user.php"class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i></a>
-        <!-- <h2><?//php print_r($_SESSION["name"]);?></h2> -->
+    <div class="container mt-4">
+        <a href="user.php" class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i> Back to Profile</a>
+        <h2 class="mt-4">Complete Orders</h2>
 
-        <h2>Complete Orders</h2>
-
-    <?php
+        <?php
         require('dbConnect.php'); // Include your database connection
 
         $user_id = $_SESSION["user_id"]; // Replace with the actual user ID
@@ -29,8 +31,9 @@ print($header);
         $stmt->execute();
 
         if ($stmt->rowCount() > 0) {
+            echo '<div class="order-list">';
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                echo '<div class="accordion">';
+                echo '<div class="accordion mt-4">';
                 echo '<div class="accordion-item">';
                 echo '<h2 class="accordion-header">';
                 echo '<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#order_' . $row['order_id'] . '">';
@@ -74,14 +77,14 @@ print($header);
                 echo '</div>';
                 echo '</div>';
             }
+            echo '</div>'; // Close the order-list div
         } else {
-            echo '<p>You still haven\'t buy anything from us .</p>';
+            echo '<p>You haven\'t made any purchases with us yet.</p>';
         }
         ?>
 
     </div>
-    
+
     <?php print ($commonFooter)?>
 </body>
-
 </html>

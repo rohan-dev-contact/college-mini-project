@@ -31,6 +31,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const passwordInput = document.getElementById("password");
+        const passwordMessage = document.getElementById("password-message");
+
+        passwordInput.addEventListener("input", function () {
+            const password = passwordInput.value;
+            const strongPasswordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
+
+            if (strongPasswordRegex.test(password)) {
+                passwordMessage.textContent = "Password is valid";
+                passwordMessage.style.color = "green";
+            } else {
+                passwordMessage.textContent = "Password should contain at least 8 characters, including uppercase, lowercase, and numbers.";
+                passwordMessage.style.color = "red";
+            }
+        });
+    });
+    function validatePassword() {
+        const passwordInput = document.getElementById("password");
+        const passwordMessage = document.getElementById("password-message");
+
+        const password = passwordInput.value;
+        const strongPasswordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
+
+        if (strongPasswordRegex.test(password)) {
+            passwordMessage.textContent = "Password is valid";
+            passwordMessage.style.color = "green";
+            return true;
+        } else {
+            passwordMessage.textContent = "Password should contain at least 8 characters, including uppercase, lowercase, and numbers.";
+            passwordMessage.style.color = "red";
+            return false;
+        }
+    }
+
+    function handleSubmit() {
+        if (validatePassword()) {
+            document.getElementById("password-form").submit();
+        }
+    }
+</script>
 <!DOCTYPE html>
 <html>
 
@@ -82,11 +124,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="tel" class="form-control" id="phone" name="phone" required>
                   </div>
                   <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" required>
-                  </div>
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                        <small id="password-message" class="form-text"></small>
+                    </div>
                   <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                  <button type="button" class="btn btn-primary" onclick="handleSubmit()">Add User</button>
                     <!-- <a href="login.php" class="btn btn-secondary">Back to Login</a> -->
                   </div>
             </form>
@@ -94,7 +137,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <?php
-    print($commonFooter);
+    print($commonFooterForHome);
     ?>
 </body>
 
