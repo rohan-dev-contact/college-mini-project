@@ -67,7 +67,7 @@ session_start();
                     </div>
         <input type="hidden" name="otp" value="<?php echo $_GET['otp']; ?>">
         <div class="d-grid gap-2">
-        <button type="button" class="btn btn-primary" onclick="handleSubmit()">Add User</button>
+        <button type="button" class="btn btn-primary" onclick="handleSubmit()">Submit</button>
         </div>
       </form>
     </div>
