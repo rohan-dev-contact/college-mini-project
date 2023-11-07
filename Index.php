@@ -41,7 +41,7 @@ print($header);
                     <p class="feature-description">Our support team is available 24/7 to assist you.</p>
                 </div>
                 <div class="span3 mt-2 mb-5">
-                    <a href="#" class="btn btn-primary">Explore Products</a>
+                    <a href="../views/login.php" class="btn btn-primary">Explore Products</a>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@ print($header);
                         <p class="card-text">Effective pain relief tablets for various types of pain.</p>
                         <p class="card-text">Price: $12.99</p>
                         <div class="span2">
-                            <a href="#" class="btn btn-primary mt-auto ">Learn More</a>
+                            <a href="../views/login.php" class="btn btn-primary mt-auto ">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ print($header);
                         <p class="card-text">Boost your immune system with our high-quality Vitamin C supplements.</p>
                         <p class="card-text">Price: $9.99</p>
                         <div class="span2">
-                            <a href="#" class="btn btn-primary mt-auto">Learn More</a>
+                            <a href="../views/login.php" class="btn btn-primary mt-auto">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -87,13 +87,13 @@ print($header);
                         <p class="card-text">Fast-acting allergy relief nasal spray for seasonal allergies.</p>
                         <p class="card-text">Price: $8.49</p>
                         <div class="span2">
-                            <a href="#" class="btn btn-primary mt-auto">Learn More</a>
+                            <a href="../views/login.php" class="btn btn-primary mt-auto">Learn More</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="span2 p-3">
-                <a href="#" class="btn btn-primary">Explore Products</a>
+                <a href="../views/login.php" class="btn btn-primary">Explore Products</a>
             </div>
         </div>
     </div>

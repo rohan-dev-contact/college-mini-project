@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     function handleSubmit() {
         if (validatePassword()) {
-            document.getElementById("password-form").submit();
+            document.getElementById("signupForm").submit();
         }
     }
 </script>
