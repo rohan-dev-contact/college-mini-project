@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         // Delete stock item from the database
-        $sql = "DELETE FROM stock WHERE id = ?";
+        $sql = "UPDATE stock SET isDeleted = 1 WHERE id = ?";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$item_id]);
 

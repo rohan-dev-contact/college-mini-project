@@ -38,7 +38,7 @@ print($header);
                     <div class="input-group">
                         <input type="text" class="form-control" name="search" placeholder="Search medicine..." style="font-size: 0.9rem;" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
                         <button class="btn btn-outline-primary" type="submit" style="font-size: 0.9rem;"><i class="bi bi-search"></i></button>
-                        <button class="btn btn-outline-secondary" onclick="clearSearch()" style="font-size: 0.9rem;">Clear</button>
+                        <button type= "button" class="btn btn-outline-secondary" onclick="clearSearch()" style="font-size: 0.9rem;">Clear</button>
                     </div>
                 </form>
 
@@ -66,7 +66,7 @@ print($header);
 
                             // Fetch stock items from the database based on search query
                             $sql = "SELECT id, medicine_name, quantity, unit, price, expiration_date, notes, image FROM stock
-                                    WHERE medicine_name LIKE :searchTerm";
+                                    WHERE medicine_name LIKE :searchTerm and isDeleted = 0";
                             $stmt = $pdo->prepare($sql);
                             $stmt->bindValue(':searchTerm', '%' . $searchTerm . '%');
                             $stmt->execute();

@@ -40,7 +40,7 @@ print($header);
                    $search_query = $_GET['search_query'];
 
                
-                   $sql_search_items = "SELECT * FROM stock WHERE medicine_name LIKE :search_query";
+                   $sql_search_items = "SELECT * FROM stock WHERE isDeleted = 0 and medicine_name LIKE :search_query";
                    $stmt_search_items = $pdo->prepare($sql_search_items);
                    $stmt_search_items->bindValue(':search_query', '%' . $search_query . '%', PDO::PARAM_STR);
                    $stmt_search_items->execute();
@@ -71,7 +71,7 @@ print($header);
                }
                }else{
                 echo ' <h2 class="mb-2" style="font-size: 1.5rem;">Explore Featured Medicines</h2>';
-                   $sql_featured_items = "SELECT * FROM stock ORDER BY RAND() LIMIT 8";
+                   $sql_featured_items = "SELECT * FROM stock where isDeleted = 0 ORDER BY RAND() LIMIT 8 ";
                    $stmt_featured_items = $pdo->query($sql_featured_items);
    
                    while ($item = $stmt_featured_items->fetch(PDO::FETCH_ASSOC)) {
