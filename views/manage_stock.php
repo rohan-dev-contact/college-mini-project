@@ -82,7 +82,12 @@ print($header);
                                 echo '<td><input type="text" class="form-control" name="price" value="' . $item['price'] . '" style="font-size: 0.9rem;"></td>';
                                 echo '<td><input type="date" class="form-control" name="expiration_date" value="' . $item['expiration_date'] . '" style="font-size: 0.9rem;"></td>';
                                 echo '<td><input type="text" class="form-control" name="notes" value="' . $item['notes'] . '" style="font-size: 0.9rem;"></td>';
-                                echo '<td><img src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" alt="Image" style="max-width: 60px; object-fit: contain;"></td>';
+                                // echo '<td><img src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" alt="Image" style="max-width: 60px; object-fit: contain;"></td>';
+                                if (!empty($item['image'])) {
+                                    echo '<td><img src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" alt="Image" style="max-width: 60px; object-fit: contain;"></td>';
+                                } else {
+                                    echo '<td><img src="../resources/logo.png" alt="Image" style="max-width: 60px; object-fit: contain;"></td>';
+                                }
                                 echo '<td><input type="file" class="form-control" name="image"></td>';
                                 echo '<td><button type="submit" class="btn btn-outline-success" style="font-size: 0.9rem;"><i class="bi bi-cloud-arrow-up"></i></button></td>';
                                 echo '</form>';

@@ -10,20 +10,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $price = $_POST['price'];
     $expiration_date = $_POST['expiration_date'];
     $notes = $_POST['notes'];
+    if(isset($_FILES['image']) && isset($_FILES['image']['tmp_name']) && $_FILES['image']['tmp_name'] != ''){
         // Handle image upload
         $image = $_FILES['image']['tmp_name'];
         $imageContent = file_get_contents($image);
-
-    try {
-        // Update stock item in the database
-        $sql = "UPDATE stock SET medicine_name = ?, quantity = ?,unit = ?, price = ?, expiration_date = ?, notes = ?,image=? WHERE id = ?";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([$medicine_name, $quantity,$unit, $price, $expiration_date, $notes,$imageContent, $item_id]);
-
-        header("Location: manage_stock.php"); // Redirect back to the manage_stock page
-    } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
+        try {
+            // Update stock item in the database
+            $sql = "UPDATE stock SET medicine_name = ?, quantity = ?,unit = ?, price = ?, expiration_date = ?, notes = ?,image=? WHERE id = ?";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([$medicine_name, $quantity,$unit, $price, $expiration_date, $notes,$imageContent, $item_id]);
+    
+            header("Location: manage_stock.php"); // Redirect back to the manage_stock page
+        } catch (PDOException $e) {
+            header("Location: manage_stock.php");
+            // echo "Error: " . $e->getMessage();
+        }
+    }else{
+        try {
+            // Update stock item in the database
+            echo'in else';
+            $sql = "UPDATE stock SET medicine_name = ?, quantity = ?,unit = ?, price = ?, expiration_date = ?, notes = ? WHERE id = ?";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([$medicine_name, $quantity,$unit, $price, $expiration_date, $notes, $item_id]);
+    
+            header("Location: manage_stock.php"); // Redirect back to the manage_stock page
+        } catch (PDOException $e) {
+            header("Location: manage_stock.php");
+            // echo "Error: " . $e->getMessage();
+        }
     }
+       
+
+   
 } else {
     // Handle invalid access
     header("Location: manage_stock.php"); // Redirect back to the manage_stock page

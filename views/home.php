@@ -48,12 +48,17 @@ print($header);
                    while ($item = $stmt_search_items->fetch(PDO::FETCH_ASSOC)) {
                        echo '<div class="col-md-3 mt-3">';
                        echo '<div class="card h-100 shadow">';
-                       echo '<img src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" class="card-img-top img-fluid" alt="Medicine Image" style="width: auto; height: 200px; object-fit: contain;">';
+                    //    echo '<img src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" class="card-img-top img-fluid" alt="Medicine Image" style="width: auto; height: 200px; object-fit: contain;">';
+                        if (!empty($item['image'])) {
+                            echo '<td><img src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" alt="Image" style="width: auto; height: 200px; object-fit: contain;"></td>';
+                        } else {
+                            echo '<td><img src="../resources/logo.png" alt="Image" style="width: auto; height: 200px; object-fit: contain;"></td>';
+                        }
                        echo '<div class="card-body">';
                        echo '<h5 class="card-title" style="font-size: 1rem;">' . $item['medicine_name'] . '</h5>';
                        echo '<p class="card-text" style="font-size: 0.9rem;">Price: $' . $item['price'] . '</p>';
-                       echo '<p class="card-text" style="font-size: 0.9rem;">Available Quantity: ' . $item['quantity'] . '</p>';
-                       echo '<p class="card-text" style="font-size: 0.9rem;">Unit Count: ' . $item['unit'] . '</p>';
+                       echo '<p class="card-text" style="font-size: 0.9rem;">Quantity: ' . $item['quantity'] . '</p>';
+                       echo '<p class="card-text" style="font-size: 0.9rem;">Unit Type: ' . $item['unit'] . '</p>';
                        echo '<p class="card-text" style="font-size: 0.9rem;">Note: ' . $item['notes'] . '</p>';
                        echo '<form action="add_to_cart.php" method="post">';
                        echo '<input type="hidden" name="medicine_id" value="' . $item['id'] . '">';
@@ -72,12 +77,17 @@ print($header);
                    while ($item = $stmt_featured_items->fetch(PDO::FETCH_ASSOC)) {
                        echo '<div class="col-md-3 mt-3">';
                        echo '<div class="card h-100 shadow">';
-                       echo '<img src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" class="card-img-top img-fluid" alt="Medicine Image" style="width: auto; height: 200px; object-fit: contain;">';
+                       //    echo '<img src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" class="card-img-top img-fluid" alt="Medicine Image" style="width: auto; height: 200px; object-fit: contain;">';
+                        if (!empty($item['image'])) {
+                            echo '<td><img src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" alt="Image" style="width: auto; height: 200px; object-fit: contain;"></td>';
+                        } else {
+                            echo '<td><img src="../resources/logo.png" alt="Image" style="width: auto; height: 200px; object-fit: contain;"></td>';
+                        }
                        echo '<div class="card-body">';
                        echo '<h5 class="card-title" style="font-size: 1rem;">' . $item['medicine_name'] . '</h5>';
                        echo '<p class="card-text" style="font-size: 0.9rem;">Price: $' . $item['price'] . '</p>';
-                       echo '<p class="card-text" style="font-size: 0.9rem;">Available Quantity: ' . $item['quantity'] . '</p>';
-                       echo '<p class="card-text" style="font-size: 0.9rem;">Unit Count: ' . $item['unit'] . '</p>';
+                       echo '<p class="card-text" style="font-size: 0.9rem;">Quantity: ' . $item['quantity'] . '</p>';
+                       echo '<p class="card-text" style="font-size: 0.9rem;">Unit Type: ' . $item['unit'] . '</p>';
                        echo '<p class="card-text" style="font-size: 0.9rem;">Note: ' . $item['notes'] . '</p>';
                        echo '<form action="add_to_cart.php" method="post">';
                        echo '<input type="hidden" name="medicine_id" value="' . $item['id'] . '">';
